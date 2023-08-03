@@ -1,0 +1,324 @@
+:root{
+    --vermelhor-soft:hsl(7, 99%, 70%);
+    --amarelo:hsl(51, 100%, 49%);
+    --ciano-escuro:hsl(167, 40%, 24%);
+    --ciano-moderado:hsl(168, 34%, 41%);
+    --azul-escuro:hsl(198, 62%, 26%);
+
+    --azul-dsaturado-escuro:hsl(212, 27%, 19%);
+    --azul-acinzentado-escuro:hsl(213, 9%, 39%);
+    --azul-acinzentado-dark:hsl(232, 10%, 55%);
+    --azul-acinzentado-normal:hsl(210, 4%, 67%);
+    --branco:hsl(0, 0%, 100%);
+
+    /* fonte */
+    --fonte-grossa: 'Fraunces', serif;
+    --fonte-fina:'Barlow', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+
+/* 
+    font grossa: font-family: 'Fraunces', serif;
+    font fina: font-family: 'Barlow', sans-serif;
+*/
+
+/* INICIO DO BODY */
+#menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #3DBEFF;
+}
+
+#menu h1{
+    color:#fff;
+    letter-spacing: -1px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 900;
+}
+
+#menu .hamburguer{
+    width: 35px;
+    height: 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.hamburguer .line{
+    width: 100%;
+    height: 3px;
+    border-radius: 10vh;
+    background-color: white;
+}
+
+.hamburguer:focus .line:nth-child(1){
+    transform: rotate(50deg) translateY(13px);
+    transition: 0.2s;
+}
+
+.hamburguer:focus .line:nth-child(2){
+    display: none;
+}
+
+.hamburguer:focus .line:nth-child(3){
+    transform: rotate(130deg) translateY(12px);
+    transition: 0.2s;
+}
+
+.hamburguer:focus{
+    transform: translateX(10px);
+}
+
+.mainPart{
+    border: 1px solid black;
+    margin-top: -25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainPart h1{
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    line-height: 9vh;
+    color: white;
+    letter-spacing: 5px;
+    margin-bottom: 10vh;
+}
+
+/* Section 1 do site (ovo) */
+.ovo{
+    margin: 21.7vh auto;
+    text-align: center;
+}
+
+.taca{
+    margin-top: -60px;
+    text-align: center;
+}
+
+/* titulo e frase da parte do ovo */
+.ovo h1,
+.taca h1{
+    font-size: 40px;
+    color: #252F3A;
+    font-family: var(--fonte-grossa);
+    margin: 10vh 0px 30px 0px;
+    padding: 0px 20px;
+    line-height: 7vh;
+}
+
+.ovo p,
+.taca p{
+    padding: 0px 25px;
+    font-size: 18px;
+    line-height: 5vh;
+    font-weight: 600;
+    font-family:var(--fonte-fina);
+    color:var(--azul-acinzentado-dark);
+    margin-bottom: 40px;
+}
+
+.ovo button,
+.taca button{
+    font-family: var(--fonte-grossa);
+    color: #252F3A;
+    font-size: 16px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px auto;
+    cursor: pointer;
+}
+
+/* efeito de sombra colorida embaixo do botão */
+.ovo button span{
+    background-color:#FDF1B5;
+    width: 130px;
+    height: 8px;
+    border-radius: 10px;
+    margin-bottom: -22px;
+}
+
+.taca button span{
+    background-color:#FED9D0;
+    width: 130px;
+    height: 8px;
+    border-radius: 10px;
+    margin-bottom: -22px;
+}
+
+/* config da section das frutas */
+.cereja,
+.laranja{
+    margin-top: 10vh;
+    text-align: center;
+}
+
+.cereja h1,
+.laranja h1{
+    margin: -40vh 0px 30px 0px;
+    font-family: var(--fonte-grossa);
+    font-size: 30px;
+    color: #25574C;
+}
+
+.cereja p,
+.laranja p{
+    padding: 0px 15px;
+    font-size: 16px;
+    font-style: var(--fonte-fina);
+    font-weight: 600;
+    color: var(--azul-acinzentado-escuro);
+    line-height: 4vh;
+    margin-bottom: 10vh;
+}
+
+/* Configuração das notas dos clientes */
+.clientes{
+    margin: 30vh 0px 0px 0px;
+    text-align: center;
+    color: var(--azul-acinzentado-dark);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: var(--fonte-grossa);
+}
+
+.notasClientes{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    margin: 7vh auto;
+    width: 80%;
+}
+
+.notasClientes div{
+    width: 340px;
+    padding: 25px 0px;
+    margin: 0px auto;
+}
+
+.notasClientes div img{
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.notasClientes div p{
+    color: var(--ciano-escuro);
+    font-family: var(--fonte-fina);
+    font-size: 18px;
+    line-height: 1.6em;
+}
+
+.notasClientes div h2{
+    color: #252F3A;
+    font-family: var(--fonte-grossa);
+    margin-top: 5vh;
+}
+
+.notasClientes div h4{
+    color: var(--azul-acinzentado-normal);
+    font-family: var(--fonte-fina);
+    font-size: 14px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+
+/* Divisão do fundo */
+.divisaoFooter{
+    display: flex;
+    flex: 1 0 157px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.divisaoFooter img{
+    max-width: 25%;
+}
+
+/* Footer */
+footer{
+    background-color:#90D4C5;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+
+}
+
+footer h2{
+    color: var(--azul-acinzentado-escuro);
+    font-family: var(--fonte-grossa);
+    font-size: 40px;
+    letter-spacing: -1px;
+}
+
+.listaFooter{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    width: 250px;
+    font-family: var(--fonte-fina);
+    color: var(--ciano-moderado);
+    margin: 30px auto;
+}
+
+.listaFooter li{
+    list-style: none;
+    cursor: pointer;
+}
+
+.listaFooter li:hover{
+    opacity: 0.4;
+}
+
+/* config das redes sociais */
+.social{
+    margin: 80px auto;
+    width: 157px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.social svg:hover{
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: 0.2;
+}
+
+
+/* Mudar as ordem das fotos do footer */
+@media screen and (width <= 425px) {
+    .divisaoFooter{
+        display: flex;
+        flex: 1 0 157px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .divisaoFooter img{
+        max-width: 50%;
+    }
+}
