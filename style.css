@@ -85,8 +85,54 @@
     transform: translateX(10px);
 }
 
+/* drop nav do hamburguer */
+.dropnavMobile{
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    top: 20vh;
+    height: 40vh;
+    width: 87%;
+    background-color: white;
+}
+
+.dropnavMobile ul{
+    height: 25vh;
+    width: 135%;
+    margin: -8vh 0px 0px 0vh;
+}
+
+.dropnavMobile ul li{
+    height: 40px;
+    list-style: none;
+    font-size: 16px;
+    color: var(--azul-acinzentado-normal);
+    font-family: var(--fonte-fina);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropnavMobile button{
+    position: fixed;
+    margin: 22vh 0px 0px 0.2vh;
+    width: 125px;
+    height: 40px;
+    border-radius:5vw;
+    background-color: var(--amarelo);
+    font-family: var(--fonte-grossa);
+}
+
+/* Fazendo a animação de abrir o dropNav */
+.hamburguer:focus ~ .dropnavMobile{
+    display: flex;
+}
+
+/* Parte do  container principal de incio */
 .mainPart{
-    border: 1px solid black;
     margin-top: -25em;
     display: flex;
     flex-direction: column;
@@ -105,7 +151,7 @@
 
 /* Section 1 do site (ovo) */
 .ovo{
-    margin: 21.7vh auto;
+    margin: 22vh auto;
     text-align: center;
 }
 
@@ -248,7 +294,6 @@
 /* Divisão do fundo */
 .divisaoFooter{
     display: flex;
-    flex: 1 0 157px;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
@@ -320,5 +365,141 @@ footer h2{
     
     .divisaoFooter img{
         max-width: 50%;
+    }
+}
+
+@media screen and (width >= 426px) {
+    #imagemHeader{
+        height: 110vh;
+    }
+
+    .dropnavMobile{
+        width: 200px;
+        left: calc(100% - 40vh);
+    }
+
+    .mainPart{
+        margin-top: -83vh;
+    }
+
+    .ovo{
+        margin-top: 30vh;
+    }
+}
+
+@media screen and (width <= 768px) {
+    .listaMenu,
+    .listaMenu li{
+        display: none;
+    }
+}
+
+@media screen and (width >= 769px) {  
+    .hamburguer{
+        display: none;
+        position: relative;
+        top: 20000vh;
+    }
+
+    .dropnavMobile{
+        display: none;
+    }
+
+    .listaMenu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 400px;
+    }
+
+    .listaMenu li{
+        list-style: none;
+        color: white;
+        font-family: var(--fonte-fina);
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .listaMenu li:hover{
+        opacity: 0.5;
+        transition: 0.2;
+    }
+
+    .button1{
+        background-color: white;
+        width: 120px;
+        height: 50px;
+        border-radius: 30px;
+        font-weight: 700;
+        font-family: var(--fonte-grossa);
+        cursor: pointer;
+    }
+
+    /* configuração da section 1 */
+    #section1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ovo{
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        margin-top: 42.5vh;
+    }
+
+    .ovo img,
+    .taca img{
+        width: 50%;
+    }
+
+    .ovo div,
+    .taca div{
+        text-align:start;
+    }
+
+    .taca{
+        align-items: center;
+        display: flex;
+        margin-top: -22vh;
+    }
+
+    .taca div{
+        display: block;
+    }
+
+    /* parte das frutas */
+
+    .agrupamentoFrutas{
+        display: flex;
+        margin-top: -56px;
+    }
+
+    .cereja,
+    .laranja{
+        display: flex;
+        flex-direction: column;
+        justify-self: left;
+        width: 50%;
+    }
+
+    .laranja img{
+        height: 54.5%;
+    }
+
+    .cereja h1,
+    .laranja h1{
+        margin-top: -31vh;
+    }
+
+    .cereja p,
+    .laranja p{
+        width: 350px;
+        margin: 0vh auto;
+    }
+
+    /* clientes */
+    .clientes{
+        margin-top: -12em;
     }
 }
