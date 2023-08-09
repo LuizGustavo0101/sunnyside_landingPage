@@ -98,6 +98,17 @@
     background-color: white;
 }
 
+.triangulo{
+    width: 0; 
+    height: 0; 
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent; 
+    border-right:25px solid white;
+    position: fixed;
+    top: 15.7vh;
+    left: 57.8vh; 
+}
+
 .dropnavMobile ul{
     height: 25vh;
     width: 135%;
